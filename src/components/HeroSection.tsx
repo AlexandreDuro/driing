@@ -157,7 +157,7 @@ export default function HeroSection() {
           
           <div className="md:w-1/2 relative stagger-item" style={isMounted ? { ...visibleStaggerStyle, transitionDelay: '0.7s' } : initialStaggerStyle}>
             <div 
-              className="relative w-full h-80 md:h-96 bg-gray-200 rounded-xl overflow-hidden card-shadow floating"
+              className="relative w-full h-80 md:h-96 bg-gray-200 rounded-xl card-shadow floating"
               style={isMounted ? { 
                 transform: `perspective(1000px) rotateX(${(mousePosition.y - 0.5) * -5}deg) rotateY(${(mousePosition.x - 0.5) * 5}deg)`,
                 transition: 'transform 0.2s ease-out'
@@ -176,13 +176,13 @@ export default function HeroSection() {
                   <span className="ml-2 font-medium">4.93/5 sur plus de 200 commentaires</span>
                 </div>
               </div>
-              
-              {/* Add decorative elements */}
-              <div className="absolute -top-3 -right-3 bg-white rounded-lg p-2 shadow-lg glass-effect rotate-3 transform hover:rotate-0 transition-transform duration-300 hover-pop">
-                <div className="flex items-center gap-2">
-                  <div className="bg-[color:var(--primary)] h-3 w-3 rounded-full"></div>
-                  <span className="text-xs font-medium">Fiabilité garantie</span>
-                </div>
+            </div>
+            
+            {/* Decorative badge positioned absolutely relative to the outer container */}
+            <div className="absolute top-[-12px] right-[-12px] bg-white rounded-lg p-2 shadow-lg glass-effect rotate-3 transform hover:rotate-0 transition-transform duration-300 hover-pop z-10">
+              <div className="flex items-center gap-2">
+                <div className="bg-[color:var(--primary)] h-3 w-3 rounded-full"></div>
+                <span className="text-xs font-medium">Fiabilité garantie</span>
               </div>
             </div>
             
