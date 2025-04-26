@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, FreeMode } from 'swiper/modules';
 
@@ -113,23 +114,35 @@ export default function HeroSection() {
           <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0 md:pr-6">
             <div className="stagger-item" style={isMounted ? { ...visibleStaggerStyle, transitionDelay: '0.1s' } : initialStaggerStyle}>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                <span className="text-[color:var(--primary)] inline-block hover-pop">Profitez</span> de vos proches,<br />
+                <span className="text-[color:var(--primary)] inline-block hover-pop">Confiance, rentabilité, sérénité</span><br />
                 <span className="relative inline-block">
-                  on s&apos;occupe 
-                  <svg className="absolute -bottom-3 left-0 w-full" viewBox="0 0 140 10" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 7C20 5 40 1 140 6" stroke="var(--accent)" strokeWidth="3" fill="none" strokeLinecap="round" strokeDasharray="150" strokeDashoffset={isMounted ? "0" : "150"} className="animate-dash">
-                      {isMounted && (
-                        <animate attributeName="stroke-dashoffset" from="150" to="0" dur="2s" fill="freeze" />
-                      )}
-                    </path>
+                  l'excellence
+                  <svg 
+                    className="absolute -bottom-3 left-0 w-full z-10" 
+                    viewBox="0 0 240 16" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    overflow="visible"
+                  >
+                    <path 
+                      d="M4 8C30 6 100 4 236 8" 
+                      stroke="var(--accent)" 
+                      strokeWidth="4" 
+                      fill="none" 
+                      strokeLinecap="round" 
+                      style={{
+                        strokeDasharray: 300,
+                        strokeDashoffset: isMounted ? 0 : 300,
+                        transition: "stroke-dashoffset 2s ease"
+                      }}
+                    />
                   </svg>
-                </span> de vos voyageurs
+                </span> sans effort
               </h1>
             </div>
             
             <div className="stagger-item" style={isMounted ? { ...visibleStaggerStyle, transitionDelay: '0.3s' } : initialStaggerStyle}>
-              <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto md:mx-0">
-                Savourez l&apos;instant présent pendant que nous orchestrons l&apos;accueil de vos hôtes. Driing Conciergerie sublime votre bien et optimise vos revenus, en toute sérénité.
+              <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto md:mx-0 flex items-center flex-wrap">
+                Avec Driing Conciergerie, profitez pleinement de votre temps : nous gérons votre bien et maximisons vos revenus.
               </p>
             </div>
             
@@ -137,14 +150,14 @@ export default function HeroSection() {
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
                 <Link
                   href="/contact"
-                  className="btn-fancy py-3 px-8 rounded-lg text-white font-medium w-full sm:w-auto text-center hover-pop"
+                  className="btn-accent-fancy w-full sm:w-auto text-center hover-pop"
                 >
                   Demander un audit gratuit
                 </Link>
                 
                 <Link
                   href="/services"
-                  className="text-[color:var(--primary)] hover:text-[color:var(--primary-dark)] font-medium flex items-center transition-colors group"
+                  className="text-[color:var(--primary)] hover:text-[color:var(--primary-dark)] font-bold flex items-center transition-colors group"
                 >
                   <span>Découvrir nos services</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -157,16 +170,22 @@ export default function HeroSection() {
           
           <div className="md:w-1/2 relative stagger-item" style={isMounted ? { ...visibleStaggerStyle, transitionDelay: '0.7s' } : initialStaggerStyle}>
             <div 
-              className="relative w-full h-80 md:h-96 bg-gray-200 rounded-xl card-shadow floating"
+              className="relative w-full h-80 md:h-96 bg-gray-200 rounded-xl card-shadow floating overflow-hidden"
               style={isMounted ? { 
                 transform: `perspective(1000px) rotateX(${(mousePosition.y - 0.5) * -5}deg) rotateY(${(mousePosition.x - 0.5) * 5}deg)`,
                 transition: 'transform 0.2s ease-out'
               } : {}}
             >
-              {/* Replace with actual image when available */}
-              <div className="absolute inset-0 flex items-center justify-center text-gray-400 text-lg">
-                Image d&apos;un intérieur moderne et élégant
-              </div>
+              {/* Hero image */}
+              <Image
+                src="/images/hero-apartment.webp" 
+                alt="Appartement élégant et moderne"
+                fill
+                className="object-cover"
+                priority
+                placeholder="blur"
+                blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAACQAAAgAAQUxQSAgAAAABF6AmAAMwEcg8QdYAVlA4IDYAAADQAQCdASoKAAMAAUAmJaQAAudYtSAA/vpo8e/3J8f1eMH2n2D+c/qP+z8+vhvzI/4XwX/AA=="
+              />
               
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white p-6">
                 <div className="flex items-center">
@@ -181,7 +200,7 @@ export default function HeroSection() {
             {/* Decorative badge positioned absolutely relative to the outer container */}
             <div className="absolute top-[-12px] right-[-12px] bg-white rounded-lg p-2 shadow-lg glass-effect rotate-3 transform hover:rotate-0 transition-transform duration-300 hover-pop z-10">
               <div className="flex items-center gap-2">
-                <div className="bg-[color:var(--primary)] h-3 w-3 rounded-full"></div>
+                <div className="bg-[color:var(--accent)] h-3 w-3 rounded-full"></div>
                 <span className="text-xs font-medium">Fiabilité garantie</span>
               </div>
             </div>
@@ -230,7 +249,7 @@ export default function HeroSection() {
           >
             {keywordItems.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white rounded-xl shadow-md p-3 h-full flex flex-col items-center text-center hover:shadow-lg transition-shadow hover:border-[color:var(--primary-light)] border border-transparent">
+                <div className="bg-white rounded-xl shadow-md p-3 h-full flex flex-col items-center text-center hover:shadow-lg transition-shadow hover:border-[color:var(--accent)] border border-transparent">
                   <div className="w-10 h-10 mb-2 flex items-center justify-center text-[color:var(--primary)]">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={item.icon} />

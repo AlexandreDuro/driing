@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Header() {
@@ -23,23 +24,23 @@ export default function Header() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? "bg-white/90 backdrop-blur-md shadow-md py-3" : "bg-transparent py-5"
+      scrolled ? "bg-white/90 backdrop-blur-md shadow-md py-2" : "bg-transparent py-3"
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center group">
-              <span className={`text-2xl font-bold gradient-text transform transition-all duration-300 ${
-                scrolled ? "scale-90" : ""
-              }`}>
-                Driing
-              </span>
-              <span className={`ml-1 text-sm font-light text-gray-600 transform transition-all duration-300 opacity-90 ${
-                scrolled ? "scale-90" : ""
-              }`}>
-                Conciergerie
-              </span>
+              <Image
+                src="/images/logo.png"
+                alt="Driing Logo"
+                width={scrolled ? 100 : 120}
+                height={scrolled ? 40 : 48}
+                className={`object-contain transition-all duration-300 ${
+                  scrolled ? "scale-90" : ""
+                }`}
+                priority
+              />
             </Link>
           </div>
           
