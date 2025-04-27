@@ -34,8 +34,8 @@ export default function Header() {
               <Image
                 src="/images/logo.png"
                 alt="Driing Logo"
-                width={scrolled ? 100 : 120}
-                height={scrolled ? 40 : 48}
+                width={scrolled ? 130 : 150}
+                height={scrolled ? 52 : 60}
                 className={`object-contain transition-all duration-300 ${
                   scrolled ? "scale-90" : ""
                 }`}
@@ -75,7 +75,7 @@ export default function Header() {
           <div className="hidden md:block">
             <Link 
               href="/contact" 
-              className="btn-primary group relative"
+              className="bg-[color:var(--accent)] hover:bg-[color:var(--accent-dark)] text-[color:var(--primary)] font-bold py-3 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-md group relative"
             >
               <span className="relative z-10">Contact</span>
               <span className="absolute inset-0 rounded-lg overflow-hidden">

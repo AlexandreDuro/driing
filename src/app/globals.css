@@ -15,6 +15,13 @@
   --gray-medium: #e9ecef;
   --gray-dark: #495057;
   --gold: #FFD51C;
+  
+  /* Border radius variables */
+  --radius-sm: 0.5rem;    /* 8px */
+  --radius-md: 1rem;      /* 16px */
+  --radius-lg: 1.5rem;    /* 24px */
+  --radius-xl: 2rem;      /* 32px */
+  --radius-full: 9999px;
 }
 
 @theme inline {
@@ -23,8 +30,8 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-poppins);
+  --font-mono: var(--font-roboto-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,19 +44,19 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 .btn-primary {
-  @apply bg-[color:var(--primary)] hover:bg-[color:var(--primary-dark)] text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-md;
+  @apply bg-[color:var(--primary)] hover:bg-[color:var(--primary-dark)] text-white font-medium py-3 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-md;
 }
 
 .btn-accent {
-  @apply bg-[color:var(--accent)] hover:bg-[color:var(--accent-dark)] text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-md;
+  @apply bg-[color:var(--accent)] hover:bg-[color:var(--accent-dark)] text-white font-medium py-3 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-md;
 }
 
 .btn-outline {
-  @apply border-2 border-[color:var(--primary)] text-[color:var(--primary)] bg-white hover:bg-[color:var(--primary)] hover:text-white font-medium py-3 px-8 rounded-lg transition-all duration-300;
+  @apply border-2 border-[color:var(--primary)] text-[color:var(--primary)] bg-white hover:bg-[color:var(--primary)] hover:text-white font-medium py-3 px-8 rounded-2xl transition-all duration-300;
 }
 
 .btn-text {
@@ -81,16 +88,16 @@ body {
 }
 
 .highlight-box {
-  @apply relative overflow-hidden rounded-xl before:absolute before:inset-0 before:rounded-xl before:border-2 before:border-[color:var(--accent)] before:scale-105 before:opacity-0 before:transition-all hover:before:scale-100 hover:before:opacity-100;
+  @apply relative overflow-hidden rounded-2xl before:absolute before:inset-0 before:rounded-2xl before:border-2 before:border-[color:var(--accent)] before:scale-105 before:opacity-0 before:transition-all hover:before:scale-100 hover:before:opacity-100;
 }
 
 /* Glass effect */
 .glass-effect {
-  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-lg;
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-lg rounded-2xl;
 }
 
 .glass-card {
-  @apply bg-white/90 backdrop-blur-md border border-white/30 shadow-lg transition-all duration-300;
+  @apply bg-white/90 backdrop-blur-md border border-white/30 shadow-lg transition-all duration-300 rounded-2xl;
 }
 
 /* Badge styling */
@@ -99,11 +106,11 @@ body {
 }
 
 .badge-primary {
-  @apply bg-[color:var(--primary)]/10 text-[color:var(--primary-dark)];
+  @apply bg-[color:var(--primary)]/10 text-[color:var(--primary-dark)] rounded-full;
 }
 
 .badge-accent {
-  @apply bg-[color:var(--accent)]/10 text-[color:var(--accent-dark)];
+  @apply bg-[color:var(--accent)]/10 text-[color:var(--accent-dark)] rounded-full;
 }
 
 /* Animations */
@@ -364,7 +371,7 @@ body {
 }
 
 .btn-accent-fancy {
-  @apply relative overflow-hidden py-3 px-8 rounded-lg text-[color:var(--primary)] font-bold transition-all duration-300 shadow-md;
+  @apply relative overflow-hidden py-3 px-8 rounded-2xl text-[color:var(--primary)] font-bold transition-all duration-300 shadow-md;
   background: var(--accent);
   box-shadow: 0 4px 14px rgba(255, 213, 28, 0.3);
 }
@@ -378,7 +385,10 @@ body {
 .btn-accent-fancy:hover {
   box-shadow: 0 6px 20px rgba(255, 213, 28, 0.4);
   transform: translateY(-2px);
-  color: var(--primary-dark);
+  color: var(--primary);
+  font-weight: 800;
+  text-shadow: 0 0 3px rgba(29, 55, 132, 0.5);
+  letter-spacing: 0.02em;
 }
 
 .btn-accent-fancy:hover:before {
