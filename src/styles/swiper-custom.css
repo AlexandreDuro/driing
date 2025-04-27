@@ -1,0 +1,53 @@
+.keyword-swiper {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.keyword-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.keyword-swiper .swiper-slide {
+  height: auto;
+  padding: 0.25rem 0;
+  transition: transform 0.3s ease;
+  pointer-events: auto; /* Allow hover interactions */
+  user-select: none;
+}
+
+.keyword-swiper .swiper-slide:hover {
+  transform: translateY(-3px);
+}
+
+/* Add animation for slide entry */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.keyword-swiper .swiper-slide-active {
+  animation: slideIn 0.5s ease forwards;
+}
+
+.keyword-swiper .swiper-slide-active:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.keyword-swiper .swiper-slide-active:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.keyword-swiper .swiper-slide-active:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.keyword-swiper .swiper-slide-active:nth-child(5) {
+  animation-delay: 0.4s;
+} 
