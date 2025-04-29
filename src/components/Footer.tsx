@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
-          <div className="md:col-span-4">
+          <div className="md:col-span-5">
             <div className="flex items-center mb-6">
               <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
                 Driing
@@ -42,7 +42,7 @@ export default function Footer() {
             </div>
           </div>
           
-          <div className="md:col-span-2">
+          <div className="md:col-span-3 md:text-center">
             <h3 className="text-lg font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2">
               <li><Link href="/" className="text-gray-400 hover:text-white transition-colors">Accueil</Link></li>
@@ -52,7 +52,7 @@ export default function Footer() {
             </ul>
           </div>
           
-          <div className="md:col-span-2">
+          <div className="md:col-span-4 md:justify-self-end">
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
               <li className="flex items-start">
@@ -72,7 +72,7 @@ export default function Footer() {
             <div className="mt-8">
               <a 
                 href="/contact" 
-                className="inline-block bg-white/10 hover:bg-white/20 text-white font-medium px-5 py-3 rounded-lg transition-colors"
+                className="inline-block bg-[color:var(--accent)] hover:bg-[color:var(--accent-dark)] text-[color:var(--primary)] font-medium px-5 py-3 rounded-lg transition-colors"
               >
                 Demander un audit gratuit
               </a>
