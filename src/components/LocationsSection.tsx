@@ -1,6 +1,7 @@
 "use client";
 
 import { HomeIcon } from "./Icons";
+import Image from "next/image";
 
 export default function LocationsSection() {
   return (
@@ -23,19 +24,21 @@ export default function LocationsSection() {
           <LocationCard 
             title="Rennes" 
             description="Une ville dynamique avec un fort potentiel locatif, idéale pour les investissements immobiliers."
+            imageUrl="/images/locations/1.jpg"
             imageText="Image de Rennes"
           />
           
           <LocationCard 
             title="Saint-Brieuc" 
             description="Une destination prisée avec un marché locatif attractif, en pleine croissance."
+            imageUrl="/images/locations/2.jpg"
             imageText="Image de Saint-Brieuc"
-            highlight={true}
           />
           
           <LocationCard 
             title="De Pléneuf à Saint-Malo" 
             description="La côte d&apos;Émeraude, une région très recherchée pour les locations saisonnières tout au long de l&apos;année."
+            imageUrl="/images/locations/3.jpg"
             imageText="Image de Pléneuf à Saint-Malo"
           />
         </div>
@@ -77,17 +80,22 @@ interface LocationCardProps {
   title: string;
   description: string;
   imageText: string;
+  imageUrl: string;
   highlight?: boolean;
 }
 
-function LocationCard({ title, description, imageText, highlight = false }: LocationCardProps) {
+function LocationCard({ title, description, imageText, imageUrl, highlight = false }: LocationCardProps) {
   return (
     <div className={`rounded-xl overflow-hidden card-shadow transition-all duration-300 hover:-translate-y-2 ${highlight ? 'relative z-10 md:-mt-4 md:-mb-4 md:scale-105' : ''}`}>
       <div className="relative h-56 w-full bg-gray-200 overflow-hidden">
-        {/* Replace with actual image when available */}
-        <div className="absolute inset-0 flex items-center justify-center text-gray-400 text-lg">
-          {imageText}
-        </div>
+        {/* Image component */}
+        <Image 
+          src={imageUrl}
+          alt={imageText}
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          className="object-cover transition-transform duration-500 hover:scale-110"
+        />
         
         {highlight && (
           <div className="absolute top-4 right-4 bg-[color:var(--primary)] text-white text-xs font-semibold px-2.5 py-1 rounded-full">

@@ -73,18 +73,6 @@ export default function FeaturesSection() {
             Pourquoi faire confiance à 
             <span className="text-[color:var(--primary)] ml-2 relative hover-pop">
               Driing Conciergerie
-              <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 300 10" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 7C50 5 100 1 300 6" stroke="var(--primary)" strokeWidth="3" fill="none" strokeLinecap="round" strokeDasharray="310" strokeDashoffset="310">
-                  <animate 
-                    attributeName="stroke-dashoffset" 
-                    from="310" 
-                    to="0" 
-                    dur="1.5s" 
-                    begin="0.5s" 
-                    fill="freeze" 
-                  />
-                </path>
-              </svg>
             </span>
             <span className="text-[color:var(--primary)]">?</span>
           </h2>
@@ -114,15 +102,15 @@ export default function FeaturesSection() {
           />
         </div>
         
-        <div className={`mt-20 bg-[color:var(--secondary)] rounded-2xl p-8 md:p-12 card-shadow transition-all duration-700 transform ${
+        <div className={`mt-20 bg-[color:var(--accent)] rounded-2xl p-8 md:p-12 card-shadow transition-all duration-700 transform ${
           isMounted && isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`} style={{ transitionDelay: isMounted ? '0.6s' : '0s' }}>
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-2/3 mb-8 md:mb-0 md:pr-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 inline-block hover-pop">
+              <h3 className="text-2xl md:text-3xl font-bold text-[color:var(--primary)] mb-4 inline-block hover-pop">
                 On s&apos;occupe de tout
               </h3>
-              <p className="text-gray-700 mb-6 text-lg">
+              <p className="text-[color:var(--primary-dark)] mb-6 text-lg font-medium">
                 Nous simplifions chaque étape, de la remise des clés à l&apos;analyse des performances, 
                 pour vous garantir un rendement maximal et une tranquillité d&apos;esprit totale.
               </p>
@@ -132,7 +120,7 @@ export default function FeaturesSection() {
                     <svg className="h-6 w-6 text-[color:var(--primary)] mr-2 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>{item}</span>
+                    <span className="text-[color:var(--primary)] font-medium">{item}</span>
                   </li>
                 ))}
               </ul>

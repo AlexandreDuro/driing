@@ -50,4 +50,55 @@
 
 .keyword-swiper .swiper-slide-active:nth-child(5) {
   animation-delay: 0.4s;
+}
+
+/* Reviews Swiper Styles */
+.reviews-swiper {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.reviews-swiper .swiper-slide {
+  height: auto;
+  transition: transform 0.3s ease;
+  opacity: 0.8;
+  transform: scale(0.97);
+}
+
+.reviews-swiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.reviews-swiper .swiper-pagination {
+  bottom: 0px;
+}
+
+.reviews-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: white;
+  opacity: 0.5;
+}
+
+.reviews-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--accent);
+}
+
+.reviews-swiper .swiper-button-next,
+.reviews-swiper .swiper-button-prev {
+  color: var(--primary);
+  background: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.reviews-swiper .swiper-button-next:after,
+.reviews-swiper .swiper-button-prev:after {
+  font-size: 16px;
+  font-weight: bold;
 } 
