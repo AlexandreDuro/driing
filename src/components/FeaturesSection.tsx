@@ -132,7 +132,7 @@ export default function FeaturesSection() {
                     À partir de
                   </span>
                   <div className="flex items-center justify-center mb-2">
-                    <span className="text-4xl md:text-5xl font-bold text-gray-900 hover-pop">15%</span>
+                    <span className="text-4xl md:text-5xl font-bold text-gray-900 hover-pop">20%</span>
                     <span className="text-gray-600 ml-2">de commission</span>
                   </div>
                   <p className="text-gray-600 mb-6">Sur les revenus générés</p>

@@ -62,13 +62,6 @@ export default function Header() {
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[color:var(--primary)] transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
               </Link>
               <Link 
-                href="#secteurs" 
-                className="group text-gray-800 font-medium text-sm relative overflow-hidden px-2 py-1"
-              >
-                <span className="relative z-10 transition-colors duration-300 group-hover:text-[color:var(--primary)]">Secteurs</span>
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[color:var(--primary)] transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-              </Link>
-              <Link 
                 href="/faq" 
                 className="group text-gray-800 font-medium text-sm relative overflow-hidden px-2 py-1"
               >
@@ -128,13 +121,6 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               Services
-            </Link>
-            <Link 
-              href="#secteurs" 
-              className="text-gray-800 hover:text-[color:var(--primary)] transition-colors w-full text-center py-2 rounded-lg hover:bg-gray-50"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Secteurs
             </Link>
             <Link 
               href="/faq" 

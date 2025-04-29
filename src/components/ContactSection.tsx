@@ -60,7 +60,7 @@ export default function ContactSection() {
             
             <div className="p-6 bg-white rounded-lg mt-10">
               <div className="text-2xl font-bold mb-1 text-[color:var(--primary)]">
-                À partir de 15%
+                À partir de 20%
               </div>
               <div className="text-sm text-[color:var(--primary-dark)] mb-4">
                 de commission sur les revenus générés
