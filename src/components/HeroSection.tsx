@@ -164,31 +164,34 @@ export default function HeroSection() {
             </div>
           </div>
           
-          <div className="md:w-1/2 relative stagger-item" style={isMounted ? { ...visibleStaggerStyle, transitionDelay: '0.7s' } : initialStaggerStyle}>
+          <div className="md:w-1/2 relative stagger-item w-full" style={isMounted ? { ...visibleStaggerStyle, transitionDelay: '0.7s' } : initialStaggerStyle}>
             <div 
-              className="relative w-full h-80 md:h-96 bg-gray-200 rounded-3xl card-shadow floating overflow-hidden"
+              className="relative w-full h-80 md:h-96 bg-gray-200 rounded-3xl card-shadow overflow-hidden mx-auto max-w-md md:max-w-none"
               style={isMounted ? { 
                 transform: `perspective(1000px) rotateX(${(mousePosition.y - 0.5) * -5}deg) rotateY(${(mousePosition.x - 0.5) * 5}deg)`,
                 transition: 'transform 0.2s ease-out'
               } : {}}
             >
               {/* Hero image */}
-              <Image
-                src="/images/hero-apartment.webp" 
-                alt="Appartement élégant et moderne"
-                fill
-                className="object-cover"
-                priority
-                placeholder="blur"
-                blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAACQAAAgAAQUxQSAgAAAABF6AmAAMwEcg8QdYAVlA4IDYAAADQAQCdASoKAAMAAUAmJaQAAudYtSAA/vpo8e/3J8f1eMH2n2D+c/qP+z8+vhvzI/4XwX/AA=="
-              />
+              <div className="absolute inset-0">
+                <Image
+                  src="/images/hero-apartment.webp" 
+                  alt="Appartement élégant et moderne"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                  priority
+                  placeholder="blur"
+                  blurDataURL="data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAAQAAAACQAAAgAAQUxQSAgAAAABF6AmAAMwEcg8QdYAVlA4IDYAAADQAQCdASoKAAMAAUAmJaQAAudYtSAA/vpo8e/3J8f1eMH2n2D+c/qP+z8+vhvzI/4XwX/AA=="
+                />
+              </div>
               
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white p-6">
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     ★★★★★
                   </div>
-                  <span className="ml-2 font-medium">4.94/5 sur plus de 150 commentaires</span>
+                  <span className="ml-2 font-medium text-sm md:text-base">4.94/5 sur plus de 150 commentaires</span>
                 </div>
               </div>
             </div>
