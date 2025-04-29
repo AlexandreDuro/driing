@@ -137,10 +137,10 @@ export default function FeaturesSection() {
                   </div>
                   <p className="text-gray-600 mb-6">Sur les revenus générés</p>
                   <a 
-                    href="/contact" 
+                    href="/tarifs" 
                     className="btn-fancy py-3 px-8 rounded-lg text-white font-medium block w-full text-center"
                   >
-                    Demander un devis
+                    Découvrir les offres
                   </a>
                 </div>
               </div>

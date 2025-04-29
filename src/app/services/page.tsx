@@ -9,12 +9,15 @@ export default function Services() {
       <Header />
       <div className="pt-32 pb-8 bg-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-6">
-            Nos Services
-          </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto text-center">
-            Une gamme complète de services pour optimiser votre bien immobilier et maximiser vos revenus.
-          </p>
+          <div className="text-center">
+            <span className="inline-block bg-[color:var(--accent)]/20 text-[color:var(--primary)] px-4 py-1 rounded-full text-sm font-medium mb-3">Prestations</span>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-6">
+              Nos Services
+            </h1>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto text-center">
+              Une gamme complète de services pour optimiser votre bien immobilier et maximiser vos revenus.
+            </p>
+          </div>
         </div>
       </div>
       
