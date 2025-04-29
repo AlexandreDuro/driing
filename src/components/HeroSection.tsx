@@ -101,11 +101,6 @@ export default function HeroSection() {
               transition: 'transform 0.2s ease-out'
             }}
           ></div>
-          
-          {/* Animated dots */}
-          <div className="absolute left-[10%] top-[30%] h-3 w-3 rounded-full bg-[color:var(--primary)] opacity-70 animate-pulse-slow"></div>
-          <div className="absolute right-[15%] top-[60%] h-2 w-2 rounded-full bg-[color:var(--accent)] opacity-60 animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute left-[25%] bottom-[20%] h-4 w-4 rounded-full bg-[color:var(--primary-light)] opacity-50 animate-pulse-slow" style={{ animationDelay: '2s' }}></div>
         </>
       )}
 
@@ -193,7 +188,7 @@ export default function HeroSection() {
                   <div className="flex text-yellow-400">
                     ★★★★★
                   </div>
-                  <span className="ml-2 font-medium">4.93/5 sur plus de 200 commentaires</span>
+                  <span className="ml-2 font-medium">4.94/5 sur plus de 150 commentaires</span>
                 </div>
               </div>
             </div>
@@ -237,7 +232,7 @@ export default function HeroSection() {
               momentum: false,
               momentumBounce: false,
             }}
-            speed={12000}
+            speed={6000}
             autoplay={{
               delay: 0,
               disableOnInteraction: false,

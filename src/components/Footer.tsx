@@ -18,7 +18,7 @@ export default function Footer() {
               Confiez-nous la gestion de votre bien et maximisez vos revenus en toute sérénité. Notre équipe d&apos;experts est à votre service pour vous offrir une expérience sur mesure.
             </p>
             <div className="flex items-center text-yellow-400 mb-6">
-              ★★★★★ <span className="ml-2 text-gray-400 text-sm">4.93/5 sur plus de 200 avis</span>
+              ★★★★★ <span className="ml-2 text-gray-400 text-sm">4.94/5 sur plus de 150 avis</span>
             </div>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">

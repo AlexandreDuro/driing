@@ -20,7 +20,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="py-20 bg-indigo-50" id="contact">
+    <section className="py-20 bg-white" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-[color:var(--primary)] font-semibold uppercase tracking-wide">
@@ -35,7 +35,7 @@ export default function ContactSection() {
         </div>
 
         <div className="flex flex-col lg:flex-row items-stretch rounded-xl overflow-hidden card-shadow">
-          <div className="lg:w-2/5 bg-gradient-bg text-white p-10 md:p-12">
+          <div className="lg:w-2/5 bg-[color:var(--accent)] text-[color:var(--primary)] p-10 md:p-12">
             <h3 className="text-2xl font-bold mb-6">
               Ce que nous proposons
             </h3>
@@ -50,22 +50,24 @@ export default function ContactSection() {
                 "Tranquillité d'esprit totale"
               ].map((item, i) => (
                 <li key={i} className="flex items-start">
-                  <CheckmarkIcon />
-                  <span className="ml-2">{item}</span>
+                  <div className="text-[color:var(--primary)]">
+                    <CheckmarkIcon />
+                  </div>
+                  <span className="ml-2 font-medium">{item}</span>
                 </li>
               ))}
             </ul>
             
-            <div className="p-6 bg-white/10 rounded-lg mt-10">
-              <div className="text-2xl font-bold mb-1">
+            <div className="p-6 bg-white rounded-lg mt-10">
+              <div className="text-2xl font-bold mb-1 text-[color:var(--primary)]">
                 À partir de 15%
               </div>
-              <div className="text-sm text-white/80 mb-4">
+              <div className="text-sm text-[color:var(--primary-dark)] mb-4">
                 de commission sur les revenus générés
               </div>
-              <div className="flex items-center text-white/90">
-                <div className="flex text-yellow-300 mr-2">★★★★★</div>
-                <span>4.93/5 sur plus de 200 avis</span>
+              <div className="flex items-center">
+                <div className="flex text-yellow-500 mr-2">★★★★★</div>
+                <span className="text-[color:var(--primary)]">4,94/5 sur plus de 150 avis</span>
               </div>
             </div>
           </div>
