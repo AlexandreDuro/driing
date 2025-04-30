@@ -66,7 +66,7 @@ export default function FeaturesSection() {
         <div className={`text-center mb-16 transition-all duration-700 transform ${
           isMounted && isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}>
-          <span className="text-[color:var(--primary)] font-semibold uppercase tracking-wide inline-block gradient-text">
+          <span className="inline-block bg-[color:var(--accent)]/20 text-[color:var(--primary)] px-4 py-1 rounded-full text-sm font-medium mb-3">
             Nos avantages
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4 relative">
@@ -132,15 +132,15 @@ export default function FeaturesSection() {
                     À partir de
                   </span>
                   <div className="flex items-center justify-center mb-2">
-                    <span className="text-4xl md:text-5xl font-bold text-gray-900 hover-pop">15%</span>
+                    <span className="text-4xl md:text-5xl font-bold text-gray-900 hover-pop">20%</span>
                     <span className="text-gray-600 ml-2">de commission</span>
                   </div>
                   <p className="text-gray-600 mb-6">Sur les revenus générés</p>
                   <a 
-                    href="/contact" 
+                    href="/tarifs" 
                     className="btn-fancy py-3 px-8 rounded-lg text-white font-medium block w-full text-center"
                   >
-                    Demander un devis
+                    Découvrir les offres
                   </a>
                 </div>
               </div>

@@ -34,7 +34,7 @@ export default function StatsSection() {
     <section className="py-20 bg-[color:var(--secondary)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-[color:var(--primary)] font-semibold uppercase tracking-wide">
+          <span className="inline-block bg-[color:var(--accent)]/20 text-[color:var(--primary)] px-4 py-1 rounded-full text-sm font-medium mb-3">
             En chiffres
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">

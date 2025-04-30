@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
-          <div className="md:col-span-4">
+          <div className="md:col-span-5">
             <div className="flex items-center mb-6">
               <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
                 Driing
@@ -42,53 +42,37 @@ export default function Footer() {
             </div>
           </div>
           
-          <div className="md:col-span-2">
+          <div className="md:col-span-3 md:text-center">
             <h3 className="text-lg font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2">
               <li><Link href="/" className="text-gray-400 hover:text-white transition-colors">Accueil</Link></li>
               <li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">Services</Link></li>
-              <li><Link href="#secteurs" className="text-gray-400 hover:text-white transition-colors">Secteurs</Link></li>
               <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link href="/faq" className="text-gray-400 hover:text-white transition-colors">FAQ</Link></li>
             </ul>
           </div>
           
-          <div className="md:col-span-2">
-            <h3 className="text-lg font-semibold mb-4">Secteurs</h3>
-            <ul className="space-y-2">
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Rennes</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Saint-Brieuc</Link></li>
-              <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">De Pléneuf à Saint-Malo</Link></li>
-            </ul>
-          </div>
-          
-          <div className="md:col-span-4">
+          <div className="md:col-span-4 md:justify-self-end">
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
               <li className="flex items-start">
-                <svg className="h-5 w-5 text-gray-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span className="text-gray-400">contact@driing-conciergerie.fr</span>
+                <a href="mailto:contact@driing.fr" className="text-gray-400 hover:text-white transition-colors">contact@driing.fr</a>
               </li>
               <li className="flex items-start">
-                <svg className="h-5 w-5 text-gray-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span className="text-gray-400">06 XX XX XX XX</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="h-5 w-5 text-gray-400 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span className="text-gray-400">Bretagne, France</span>
+                <a href="tel:+33123456789" className="text-gray-400 hover:text-white transition-colors">+33 1 23 45 67 89</a>
               </li>
             </ul>
             
             <div className="mt-8">
               <a 
                 href="/contact" 
-                className="inline-block bg-white/10 hover:bg-white/20 text-white font-medium px-5 py-3 rounded-lg transition-colors"
+                className="inline-block bg-[color:var(--accent)] hover:bg-[color:var(--accent-dark)] text-[color:var(--primary)] font-medium px-5 py-3 rounded-lg transition-colors"
               >
                 Demander un audit gratuit
               </a>
