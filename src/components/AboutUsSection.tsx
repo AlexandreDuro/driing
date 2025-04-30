@@ -15,9 +15,9 @@ export default function AboutUsSection() {
   const visibleStaggerStyle = { opacity: 1, transform: 'translateY(0)' };
 
   return (
-    <section className="py-20 bg-white" id="about">
+    <section className="py-16 md:py-20 bg-white" id="about">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <span className="inline-block bg-[color:var(--accent)]/20 text-[color:var(--primary)] px-4 py-1 rounded-full text-sm font-medium mb-3">
             Notre équipe
           </span>
@@ -29,10 +29,10 @@ export default function AboutUsSection() {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-12">
           {/* Left Column - Owner's Photo */}
-          <div className="lg:w-2/5 relative stagger-item" style={isMounted ? { ...visibleStaggerStyle, transitionDelay: '0.1s' } : initialStaggerStyle}>
-            <div className="relative h-[500px] w-full max-w-md mx-auto">
+          <div className="w-full lg:w-2/5 relative stagger-item mb-8 lg:mb-0" style={isMounted ? { ...visibleStaggerStyle, transitionDelay: '0.1s' } : initialStaggerStyle}>
+            <div className="relative h-[350px] sm:h-[400px] md:h-[500px] w-full max-w-md mx-auto">
               <div className="absolute inset-0 bg-[color:var(--accent)]/20 rounded-2xl transform rotate-3"></div>
               <div className="absolute inset-0 overflow-hidden rounded-2xl transform -rotate-3 border-4 border-white shadow-xl">
                 <Image
@@ -40,7 +40,8 @@ export default function AboutUsSection() {
                   alt="Fondateur de Driing Conciergerie"
                   fill
                   className="object-cover rounded-xl object-[center_top]"
-                  sizes="(max-width: 768px) 100vw, 40vw"
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 40vw"
+                  priority
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg">
