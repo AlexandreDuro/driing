@@ -89,7 +89,7 @@ export default function AboutUsSection() {
                 </div>
               </div>
               <div>
-                <div className="font-medium">Rennes, France</div>
+                <div className="font-medium text-[color:var(--primary)]">Rennes, France</div>
                 <div className="text-sm text-gray-500">Nous contacter: <a href="/contact" className="text-[color:var(--primary)] hover:underline">Prendre rendez-vous</a></div>
               </div>
             </div>
