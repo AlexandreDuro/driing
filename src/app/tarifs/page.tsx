@@ -154,7 +154,7 @@ export default function Tarifs() {
                     href="/contact" 
                     className="w-full block py-3 px-4 text-center rounded-lg bg-[color:var(--primary)] text-white font-medium hover:bg-[color:var(--primary-dark)] shadow-md hover:shadow-lg transition-all"
                   >
-                    Demander un devis
+                    Nous contacter
                   </Link>
                 </div>
               </div>

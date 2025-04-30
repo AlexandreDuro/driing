@@ -7,6 +7,37 @@ export default function LocationsSection() {
   return (
     <section className="py-20 bg-white" id="secteurs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Comment ça marche section */}
+        <div className="mb-20 bg-[color:var(--secondary)] rounded-2xl p-8 md:p-12 card-shadow">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Comment ça marche ?
+            </h3>
+            <p className="text-gray-700 max-w-3xl mx-auto">
+              Nous simplifions chaque étape, de la remise des clés à l&apos;analyse des performances, pour vous garantir un rendement maximal et une tranquillité d&apos;esprit totale.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
+            <ProcessStep 
+              number="1" 
+              title="Remise des clés" 
+              description="Rendez-vous sur place pour réaliser l&apos;état des lieux, signer le contrat et remettre les clés."
+            />
+            <ProcessStep 
+              number="2" 
+              title="Gestion intégrale" 
+              description="Nous gérons chaque aspect pour que vous profitiez pleinement de vos revenus passifs."
+            />
+            <ProcessStep 
+              number="3" 
+              title="Analyse des performances" 
+              description="Recevez un audit mensuel avec les nuits louées, taux de remplissage et autres indicateurs clés."
+            />
+          </div>
+        </div>
+
+        {/* Nos secteurs d'intervention section */}
         <div className="text-center mb-16">
           <span className="text-[color:var(--primary)] font-semibold uppercase tracking-wide">
             Zones d&apos;activité
@@ -41,35 +72,6 @@ export default function LocationsSection() {
             imageUrl="/images/locations/3.jpg"
             imageText="Image de Pléneuf à Saint-Malo"
           />
-        </div>
-        
-        <div className="mt-20 bg-[color:var(--secondary)] rounded-2xl p-8 md:p-12 card-shadow">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Comment ça marche ?
-            </h3>
-            <p className="text-gray-700 max-w-3xl mx-auto">
-              Nous simplifions chaque étape, de la remise des clés à l&apos;analyse des performances, pour vous garantir un rendement maximal et une tranquillité d&apos;esprit totale.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
-            <ProcessStep 
-              number="1" 
-              title="Remise des clés" 
-              description="Rendez-vous sur place pour réaliser l&apos;état des lieux, signer le contrat et remettre les clés."
-            />
-            <ProcessStep 
-              number="2" 
-              title="Gestion intégrale" 
-              description="Nous gérons chaque aspect pour que vous profitiez pleinement de vos revenus passifs."
-            />
-            <ProcessStep 
-              number="3" 
-              title="Analyse des performances" 
-              description="Recevez un audit mensuel avec les nuits louées, taux de remplissage et autres indicateurs clés."
-            />
-          </div>
         </div>
       </div>
     </section>
