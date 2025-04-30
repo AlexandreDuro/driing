@@ -48,11 +48,11 @@ body {
 }
 
 .btn-primary {
-  @apply bg-[color:var(--primary)] hover:bg-[color:var(--primary-dark)] text-white font-medium py-3 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-md;
+  @apply bg-[color:var(--accent)] hover:bg-[color:var(--accent-dark)] text-[color:var(--primary)] font-medium py-3 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-md;
 }
 
 .btn-accent {
-  @apply bg-[color:var(--accent)] hover:bg-[color:var(--accent-dark)] text-white font-medium py-3 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-md;
+  @apply bg-[color:var(--accent)] hover:bg-[color:var(--accent-dark)] text-[color:var(--primary)] font-medium py-3 px-8 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl shadow-md;
 }
 
 .btn-outline {
@@ -187,6 +187,8 @@ body {
 
 .pulse-border {
   animation: pulse-border 2s infinite;
+  background-color: var(--accent);
+  color: var(--primary);
 }
 
 @keyframes shine {
@@ -350,19 +352,19 @@ body {
 
 /* Enhanced buttons */
 .btn-fancy {
-  @apply relative overflow-hidden py-3 px-8 rounded-lg text-white font-medium transition-all duration-300 shadow-md;
-  background: var(--primary);
-  box-shadow: 0 4px 14px rgba(29, 55, 132, 0.25);
+  @apply relative overflow-hidden py-3 px-8 rounded-lg text-[color:var(--primary)] font-medium transition-all duration-300 shadow-md;
+  background: var(--accent);
+  box-shadow: 0 4px 14px rgba(255, 213, 28, 0.3);
 }
 
 .btn-fancy:before {
   content: "";
   @apply absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-300;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  background: var(--accent-dark);
 }
 
 .btn-fancy:hover {
-  box-shadow: 0 6px 20px rgba(29, 55, 132, 0.35);
+  box-shadow: 0 6px 20px rgba(255, 213, 28, 0.4);
   transform: translateY(-2px);
 }
 
@@ -379,7 +381,7 @@ body {
 .btn-accent-fancy:before {
   content: "";
   @apply absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-300;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  background: var(--accent-dark);
 }
 
 .btn-accent-fancy:hover {
@@ -387,7 +389,7 @@ body {
   transform: translateY(-2px);
   color: var(--primary);
   font-weight: 800;
-  text-shadow: 0 0 3px rgba(29, 55, 132, 0.5);
+  text-shadow: 0 0 3px rgba(29, 55, 132, 0.2);
   letter-spacing: 0.02em;
 }
 

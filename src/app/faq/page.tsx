@@ -128,43 +128,43 @@ export default function FAQPage() {
 
 const faqItems: FAQItem[] = [
   {
-    question: "Qu&apos;est-ce qu&apos;une conciergerie d&apos;entreprise ?",
-    answer: "Une conciergerie d&apos;entreprise est un service qui permet aux collaborateurs de déléguer leurs tâches personnelles quotidiennes. Cela leur permet de se concentrer pleinement sur leur travail tout en améliorant leur équilibre vie professionnelle/vie personnelle."
+    question: "Qu'est-ce qu'une conciergerie Airbnb ?",
+    answer: "Une conciergerie Airbnb est un service professionnel qui prend en charge la gestion complète de votre bien mis en location courte durée. Cela inclut l'accueil des voyageurs, le ménage, la maintenance, et l&apos;optimisation de votre annonce pour maximiser vos revenus."
   },
   {
-    question: "Quels services proposez-vous ?",
-    answer: "Nous proposons une large gamme de services : pressing, cordonnerie, retouches, livraison de courses, services postaux, réservations (restaurants, voyages, spectacles), services à domicile, aide administrative, et bien d&apos;autres prestations personnalisées selon les besoins de votre entreprise."
+    question: "Quels services proposez-vous exactement ?",
+    answer: "Nous proposons une gestion clé en main qui comprend : création et optimisation des annonces, gestion des réservations, accueil des voyageurs, ménage professionnel, entretien du bien, services de conciergerie 24/7, tarification dynamique, et analyse mensuelle des performances de votre bien."
   },
   {
-    question: "Comment fonctionne la mise en place d&apos;une conciergerie ?",
-    answer: "Après une analyse de vos besoins, nous définissons ensemble le périmètre des services, les horaires de présence et les modalités pratiques. Nous installons ensuite un espace dédié dans vos locaux et mettons à disposition un(e) concierge formé(e) qui devient l&apos;interlocuteur privilégié de vos collaborateurs."
+    question: "Comment fonctionne votre commission ?",
+    answer: "Notre commission est un pourcentage prélevé sur les revenus générés par votre bien. Elle commence à 20% pour le pack Essentiel et varie selon le niveau de service choisi. Cette commission couvre l'ensemble de nos prestations sans frais cachés supplémentaires."
   },
   {
-    question: "Quel est le coût d&apos;une conciergerie d&apos;entreprise ?",
-    answer: "Le coût dépend de plusieurs facteurs : taille de l&apos;entreprise, nombre de collaborateurs, fréquence de présence souhaitée et éventail des services proposés. Nous établissons un devis personnalisé après étude de vos besoins spécifiques."
+    question: "Quel est le taux d'occupation moyen que vous obtenez ?",
+    answer: "Notre taux d'occupation moyen est de 82%, bien au-dessus de la moyenne du marché. Cela est rendu possible grâce à notre expertise en optimisation d'annonces, notre stratégie de tarification dynamique et notre excellente réputation qui attire davantage de voyageurs."
   },
   {
-    question: "Quelle est la différence entre une conciergerie et des avantages classiques ?",
-    answer: "Contrairement aux avantages classiques souvent standardisés, la conciergerie offre des services personnalisés et évolutifs qui répondent aux besoins réels des collaborateurs. Elle crée également un lien humain grâce à la présence d&apos;un concierge dédié qui connaît les habitudes de chacun."
+    question: "Dois-je signer un contrat d'engagement ?",
+    answer: "Oui, nous établissons un contrat qui définit clairement les termes de notre collaboration. La durée d'engagement dépend du pack choisi : pas d'engagement pour le pack Essentiel, 6 mois pour le pack Sérénité, et 1 an pour le pack Privilège."
   },
   {
-    question: "Comment mesurer le retour sur investissement d&apos;une conciergerie ?",
-    answer: "Le ROI se mesure à travers plusieurs indicateurs : taux d&apos;utilisation des services, enquêtes de satisfaction, gain de temps pour les collaborateurs, impact sur le bien-être et la productivité, ainsi que l&apos;attractivité et la fidélisation des talents."
+    question: "Comment serai-je informé(e) des réservations ?",
+    answer: "Vous aurez accès à un tableau de bord en ligne où vous pourrez consulter en temps réel le calendrier des réservations, les revenus générés et les commentaires des voyageurs. Nous vous envoyons également un rapport mensuel détaillant les performances de votre bien."
   },
   {
-    question: "Proposez-vous des services en dehors des heures de bureau ?",
-    answer: "Oui, nous pouvons adapter nos services pour répondre aux besoins en dehors des heures de bureau classiques, notamment via notre plateforme digitale qui permet de faire des demandes 24h/24 et 7j/7."
+    question: "Que se passe-t-il en cas de dommages causés par un voyageur ?",
+    answer: "Nous documentons rigoureusement l'état de votre bien avant et après chaque séjour. En cas de dommages, nous vous assistons dans les démarches auprès d'Airbnb pour obtenir une compensation via leur garantie hôte. Nous pouvons également gérer les réparations nécessaires."
   },
   {
-    question: "La conciergerie est-elle adaptée aux PME ?",
-    answer: "Absolument ! Nous proposons des formules flexibles spécialement conçues pour les PME, avec des présences adaptées à la taille de l&apos;entreprise et un choix de services optimisé pour maximiser l&apos;impact auprès de vos collaborateurs."
+    question: "Puis-je utiliser mon bien quand je le souhaite ?",
+    answer: "Absolument ! Vous restez propriétaire et pouvez bloquer votre calendrier pour utiliser votre bien quand vous le souhaitez. Il vous suffit de nous informer à l'avance afin que nous puissions ajuster le calendrier de réservations en conséquence."
   },
   {
-    question: "Comment garantissez-vous la qualité des prestataires ?",
-    answer: "Tous nos prestataires sont rigoureusement sélectionnés selon des critères stricts de qualité, fiabilité et éthique. Nous privilégions les artisans et commerces locaux et évaluons régulièrement leurs prestations pour maintenir un niveau d&apos;excellence."
+    question: "Couvrez-vous uniquement Airbnb ou aussi d&apos;autres plateformes ?",
+    answer: "Nous diffusons votre annonce sur plusieurs plateformes (Airbnb, Booking.com, Expedia, etc.) pour maximiser votre visibilité et votre taux d'occupation. Notre système synchronise automatiquement les calendriers pour éviter les doubles réservations."
   },
   {
-    question: "Peut-on personnaliser les services selon notre secteur d&apos;activité ?",
-    answer: "Tout à fait ! Nous adaptons notre offre aux spécificités de votre secteur d&apos;activité et à la culture de votre entreprise pour proposer des services parfaitement alignés avec vos valeurs et les besoins particuliers de vos équipes."
+    question: "Comment démarrer avec Driing Conciergerie ?",
+    answer: "Le processus est simple : contactez-nous pour un audit gratuit de votre bien, nous établissons ensemble un prévisionnel de revenus, signons le contrat, puis nous prenons en charge la création des annonces et l'organisation de votre espace. Vous pouvez commencer à générer des revenus en quelques jours seulement !"
   }
 ]; 

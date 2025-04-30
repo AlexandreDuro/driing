@@ -10,6 +10,9 @@ export default function LocationsSection() {
         {/* Comment ça marche section */}
         <div className="mb-20 bg-[color:var(--secondary)] rounded-2xl p-8 md:p-12 card-shadow">
           <div className="text-center mb-8">
+            <span className="inline-block bg-[color:var(--accent)]/20 text-[color:var(--primary)] px-4 py-1 rounded-full text-sm font-medium mb-3">
+              Fonctionnement
+            </span>
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               Comment ça marche ?
             </h3>
@@ -39,7 +42,7 @@ export default function LocationsSection() {
 
         {/* Nos secteurs d'intervention section */}
         <div className="text-center mb-16">
-          <span className="text-[color:var(--primary)] font-semibold uppercase tracking-wide">
+          <span className="inline-block bg-[color:var(--accent)]/20 text-[color:var(--primary)] px-4 py-1 rounded-full text-sm font-medium mb-3">
             Zones d&apos;activité
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">

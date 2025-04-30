@@ -145,7 +145,7 @@ export default function Header() {
             </Link>
             <Link 
               href="/contact" 
-              className="pulse-border w-full text-center py-2 px-4 bg-gradient-to-r from-[color:var(--primary)] to-[color:var(--accent)] text-white rounded-lg"
+              className="pulse-border w-full text-center py-2 px-4 bg-[color:var(--accent)] text-[color:var(--primary)] rounded-lg"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact

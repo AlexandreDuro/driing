@@ -66,7 +66,7 @@ export default function FeaturesSection() {
         <div className={`text-center mb-16 transition-all duration-700 transform ${
           isMounted && isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
         }`}>
-          <span className="text-[color:var(--primary)] font-semibold uppercase tracking-wide inline-block gradient-text">
+          <span className="inline-block bg-[color:var(--accent)]/20 text-[color:var(--primary)] px-4 py-1 rounded-full text-sm font-medium mb-3">
             Nos avantages
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4 relative">
