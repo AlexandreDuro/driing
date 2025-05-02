@@ -1,22 +1,78 @@
 "use client";
 
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { CheckmarkIcon } from "./Icons";
+
+// Define form data type
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone?: string;
+  address: string;
+  propertyType: string;
+}
 
 export default function ContactSection() {
   const [formState, setFormState] = useState({
     submitted: false,
-    loading: false
+    loading: false,
+    error: ''
+  });
+  const [formData, setFormData] = useState<FormData>({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    address: '',
+    propertyType: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setFormState({ loading: true, submitted: false });
+    setFormState({ loading: true, submitted: false, error: '' });
     
-    // Simulate form submission
-    setTimeout(() => {
-      setFormState({ loading: false, submitted: true });
-    }, 1000);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const result = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(result.error || 'Une erreur est survenue');
+      }
+      
+      setFormState({ loading: false, submitted: true, error: '' });
+      // Reset form data
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        address: '',
+        propertyType: ''
+      });
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setFormState({ 
+        loading: false, 
+        submitted: false, 
+        error: error instanceof Error ? error.message : 'Une erreur est survenue lors de l\'envoi du formulaire'
+      });
+    }
   };
 
   return (
@@ -85,7 +141,7 @@ export default function ContactSection() {
                   Nous avons bien reçu votre demande d&apos;audit. Notre équipe vous contactera dans les plus brefs délais.
                 </p>
                 <button 
-                  onClick={() => setFormState({ loading: false, submitted: false })}
+                  onClick={() => setFormState({ loading: false, submitted: false, error: '' })}
                   className="text-[color:var(--primary)] font-medium"
                 >
                   Envoyer une nouvelle demande
@@ -93,6 +149,12 @@ export default function ContactSection() {
               </div>
             ) : (
               <form className="space-y-6" onSubmit={handleSubmit}>
+                {formState.error && (
+                  <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-4">
+                    {formState.error}
+                  </div>
+                )}
+                
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
@@ -102,6 +164,8 @@ export default function ContactSection() {
                       type="text"
                       id="firstName"
                       name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-[color:var(--primary)] focus:border-[color:var(--primary)] transition-colors"
                       required
                     />
@@ -114,6 +178,8 @@ export default function ContactSection() {
                       type="text"
                       id="lastName"
                       name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-[color:var(--primary)] focus:border-[color:var(--primary)] transition-colors"
                       required
                     />
@@ -128,6 +194,8 @@ export default function ContactSection() {
                     type="email"
                     id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-[color:var(--primary)] focus:border-[color:var(--primary)] transition-colors"
                     required
                   />
@@ -141,6 +209,8 @@ export default function ContactSection() {
                     type="tel"
                     id="phone"
                     name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-[color:var(--primary)] focus:border-[color:var(--primary)] transition-colors"
                   />
                 </div>
@@ -153,6 +223,8 @@ export default function ContactSection() {
                     type="text"
                     id="address"
                     name="address"
+                    value={formData.address}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-[color:var(--primary)] focus:border-[color:var(--primary)] transition-colors"
                     required
                   />
@@ -165,6 +237,8 @@ export default function ContactSection() {
                   <select
                     id="propertyType"
                     name="propertyType"
+                    value={formData.propertyType}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-[color:var(--primary)] focus:border-[color:var(--primary)] transition-colors"
                     required
                   >
