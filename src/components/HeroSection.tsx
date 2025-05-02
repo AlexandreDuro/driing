@@ -72,7 +72,7 @@ export default function HeroSection() {
   return (
     <section 
       ref={heroRef}
-      className="pt-28 pb-20 md:pt-36 md:pb-24 relative overflow-hidden parallax-container page-transition"
+      className="pt-36 pb-20 md:pt-36 md:pb-24 relative overflow-hidden parallax-container page-transition"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-[color:var(--secondary)] to-white z-0 opacity-90"></div>

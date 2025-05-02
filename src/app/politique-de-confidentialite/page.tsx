@@ -38,7 +38,7 @@ export default function PolitiqueConfidentialite() {
               Le responsable du traitement des données personnelles est la société SIVY MATHIS, SARL immatriculée au RCS sous le numéro 938 204 716, dont le siège social est situé au 12 RUE DES MEUNIERS, 22230 TREMOREL.
             </p>
             <p className="text-gray-700 mb-4">
-              Pour toute question relative à la protection de vos données personnelles, vous pouvez nous contacter par e-mail à l&apos;adresse suivante : contact@driing.fr
+              Pour toute question relative à la protection de vos données personnelles, vous pouvez nous contacter par e-mail à l&apos;adresse suivante : contact@driing-conciergerie.fr
             </p>
           </div>
           
@@ -124,7 +124,7 @@ export default function PolitiqueConfidentialite() {
               <li><strong>Droit d&apos;opposition :</strong> vous pouvez vous opposer au traitement de vos données.</li>
             </ul>
             <p className="text-gray-700 mb-4">
-              Pour exercer ces droits, vous pouvez nous contacter par e-mail à contact@driing.fr ou par courrier à l&apos;adresse du siège social.
+              Pour exercer ces droits, vous pouvez nous contacter par e-mail à contact@driing-conciergerie.fr ou par courrier à l&apos;adresse du siège social.
             </p>
             <p className="text-gray-700 mb-4">
               Vous disposez également du droit d&apos;introduire une réclamation auprès de la Commission Nationale de l&apos;Informatique et des Libertés (CNIL).

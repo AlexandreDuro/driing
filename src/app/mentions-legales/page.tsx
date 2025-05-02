@@ -59,7 +59,7 @@ export default function MentionsLegales() {
               Le Directeur de la publication est [Nom du directeur de publication], en qualité de [Fonction] de la société SIVY MATHIS.
             </p>
             <p className="text-gray-700 mb-4">
-              Pour contacter le directeur de la publication, veuillez utiliser l&apos;adresse e-mail suivante : contact@driing.fr
+              Pour contacter le directeur de la publication, veuillez utiliser l&apos;adresse e-mail suivante : contact@driing-conciergerie.fr
             </p>
           </div>
           
@@ -86,7 +86,7 @@ export default function MentionsLegales() {
           <div className="bg-white rounded-xl shadow-md p-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Contact</h2>
             <p className="text-gray-700 mb-4">
-              Pour toute question relative à ce site, vous pouvez nous contacter par e-mail à l&apos;adresse suivante : contact@driing.fr
+              Pour toute question relative à ce site, vous pouvez nous contacter par e-mail à l&apos;adresse suivante : contact@driing-conciergerie.fr
             </p>
           </div>
         </div>
