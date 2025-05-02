@@ -17,7 +17,7 @@ export default function Tarifs() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
             <span className="inline-block bg-[color:var(--accent)]/20 text-[color:var(--primary)] px-4 py-1 rounded-full text-sm font-medium mb-3">Nos offres</span>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Tarifs et forfaits</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Formules et tarifs</h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Des solutions adaptées à vos besoins avec un engagement sur la qualité de service et la rentabilité de votre bien.
             </p>

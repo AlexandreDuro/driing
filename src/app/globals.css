@@ -246,15 +246,7 @@ body {
 }
 
 .fancy-list li {
-  @apply pl-8 relative;
-}
-
-.fancy-list li::before {
-  @apply content-[''] absolute left-0 top-1.5 w-4 h-4 rounded-full bg-[color:var(--primary)] opacity-20;
-}
-
-.fancy-list li::after {
-  @apply content-[''] absolute left-1.5 top-3 w-1 h-1 rounded-full bg-[color:var(--primary)];
+  @apply relative;
 }
 
 /* Additional animations for interactivity */
