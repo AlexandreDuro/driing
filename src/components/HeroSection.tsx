@@ -137,7 +137,7 @@ export default function HeroSection() {
             
             <div className="stagger-item" style={isMounted ? { ...visibleStaggerStyle, transitionDelay: '0.3s' } : initialStaggerStyle}>
               <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto md:mx-0 flex items-center flex-wrap">
-                Avec Driing Conciergerie, profitez pleinement de votre temps, nous gérons votre bien et maximisons vos revenus.
+                Avec Driing Conciergerie, profitez pleinement de votre temps, nous gérons votre bien et augmentons vos revenus.
               </p>
             </div>
             
