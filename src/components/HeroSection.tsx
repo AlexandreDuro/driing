@@ -175,7 +175,7 @@ export default function HeroSection() {
               {/* Hero image */}
               <div className="absolute inset-0">
                 <Image
-                  src="/images/hero-apartment.webp" 
+                  src="/images/hero-apartment.webp?v=2" 
                   alt="Appartement élégant et moderne"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
