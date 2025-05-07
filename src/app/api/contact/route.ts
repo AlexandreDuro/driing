@@ -6,7 +6,6 @@ export async function POST(request: Request) {
     const formData = await request.json();
     
     let transporter;
-    let testAccount;
     
     // Check if SMTP credentials are set
     if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS) {
@@ -21,19 +20,7 @@ export async function POST(request: Request) {
         },
       });
     } else {
-      // Create a test account for development
-      console.log('No SMTP credentials found. Using Ethereal Email test account...');
-      testAccount = await nodemailer.createTestAccount();
-      
-      transporter = nodemailer.createTransport({
-        host: 'smtp.ethereal.email',
-        port: 587,
-        secure: false,
-        auth: {
-          user: testAccount.user,
-          pass: testAccount.pass,
-        },
-      });
+      console.log('No SMTP credentials found.');
     }
 
     // Format the message
@@ -69,12 +56,6 @@ export async function POST(request: Request) {
         </div>
       </div>`
     });
-
-    // If using test account, log the preview URL
-    if (testAccount) {
-      console.log('Message sent: %s', info.messageId);
-      console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-    }
 
     return NextResponse.json({ success: true });
   } catch (error) {
