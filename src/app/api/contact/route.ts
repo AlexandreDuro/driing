@@ -6,10 +6,13 @@ export async function POST(request: Request) {
     const formData = await request.json();
     
     let transporter;
-    
-    // Check if SMTP credentials are set
-    if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS) {
-      // Use production configuration
+
+    // ✅ Si les variables d'environnement SMTP sont présentes, on configure l'envoi de mail
+    if (
+      process.env.SMTP_HOST &&
+      process.env.SMTP_USER &&
+      process.env.SMTP_PASS
+    ) {
       transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST,
         port: Number(process.env.SMTP_PORT) || 587,
@@ -20,10 +23,24 @@ export async function POST(request: Request) {
         },
       });
     } else {
-      console.log('No SMTP credentials found.');
+      // 🛑 En production, on ne doit jamais continuer sans configuration SMTP
+      if (process.env.NODE_ENV === 'production') {
+        console.error('❌ Aucune configuration SMTP trouvée en production.');
+        return NextResponse.json(
+          { success: false, error: 'Configuration SMTP manquante.' },
+          { status: 500 }
+        );
+      }
+
+      // ✅ En local (dev), on peut logguer un avertissement sans envoyer de mail
+      console.warn('⚠️ Aucune configuration SMTP trouvée. Aucun e-mail ne sera envoyé.');
+      return NextResponse.json(
+        { success: true, warning: 'E-mail non envoyé (environnement de développement).' },
+        { status: 200 }
+      );
     }
 
-    // Format the message
+    // ✉️ Contenu du message
     const message = `
       Nouvelle demande d'audit de bien:
       
@@ -37,7 +54,7 @@ export async function POST(request: Request) {
       Message envoyé depuis le formulaire de contact du site Driing Conciergerie.
     `;
 
-    // Send the email
+    // ✅ Envoi de l'e-mail
     const info = await transporter.sendMail({
       from: process.env.EMAIL_FROM || 'site-web@driing-conciergerie.fr',
       to: 'contact@driing-conciergerie.fr',
@@ -57,12 +74,14 @@ export async function POST(request: Request) {
       </div>`
     });
 
+    console.log('✅ E-mail envoyé :', info.messageId);
+
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('❌ Erreur lors de l\'envoi du message :', error);
     return NextResponse.json(
       { success: false, error: 'Erreur lors de l\'envoi du message' },
       { status: 500 }
     );
   }
-} 
+}
