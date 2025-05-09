@@ -21,7 +21,7 @@ export default function Tarifs() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Des solutions adaptées à vos besoins avec un engagement sur la qualité de service et la rentabilité de votre bien.
             </p>
-            <p className="text-sm text-gray-500 mt-4">💼 Les pourcentages sont HT (Hors Taxes)</p>
+            <p className="text-sm text-gray-500 mt-4">💼 Les pourcentages sont TTC (toutes taxes comprises)</p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
@@ -88,7 +88,7 @@ export default function Tarifs() {
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-1">Pack Sérénité</h2>
                 <div className="text-3xl font-bold text-[color:var(--primary)] mb-4">
-                  20% <span className="text-sm font-normal text-gray-500">du CA Net</span>
+                  24% <span className="text-sm font-normal text-gray-500">du CA Net</span>
                 </div>
                 <p className="text-gray-600 text-sm mb-4">
                   Une gestion optimisée avec un accompagnement complet et plusieurs durées d&apos;engagement
@@ -236,7 +236,7 @@ export default function Tarifs() {
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-1">Pack Privilège</h2>
                 <div className="text-3xl font-bold text-[color:var(--primary)] mb-4">
-                  25% <span className="text-sm font-normal text-gray-500">du CA Net</span>
+                  30% <span className="text-sm font-normal text-gray-500">du CA Net</span>
                 </div>
                 <p className="text-gray-600 text-sm mb-4">
                   Notre formule premium pour une prise en charge totale avec tous les services inclus
