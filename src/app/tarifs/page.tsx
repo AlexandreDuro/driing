@@ -79,7 +79,7 @@ export default function Tarifs() {
             {/* Pack Sérénité - HIGHLIGHTED */}
             <div className="bg-white rounded-2xl overflow-hidden shadow-2xl border-2 border-[color:var(--primary)] relative transform hover:scale-105 transition-all duration-300 -translate-y-6 lg:col-span-2 flex flex-col">
               <div className="absolute top-0 inset-x-0 bg-[color:var(--primary)] text-white text-center py-2 text-sm">
-                <span className="font-bold">Formule recommandée</span>
+                <span className="font-bold">Formule la plus choisie</span>
               </div>
               
               <div className="p-6 border-b border-gray-100 pt-12 flex flex-col" style={{ minHeight: "330px" }}>
