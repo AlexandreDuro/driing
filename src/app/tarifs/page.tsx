@@ -88,7 +88,7 @@ export default function Tarifs() {
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-1">Pack Sérénité</h2>
                 <div className="text-3xl font-bold text-[color:var(--primary)] mb-4">
-                  24% <span className="text-sm font-normal text-gray-500">du CA Net</span>
+                  25% <span className="text-sm font-normal text-gray-500">du CA Net</span>
                 </div>
                 <p className="text-gray-600 text-sm mb-4">
                   Une gestion optimisée avec un accompagnement complet et plusieurs durées d&apos;engagement
